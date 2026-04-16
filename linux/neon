@@ -1,0 +1,28 @@
+#!/bin/bash
+# NEON ERP - Cliente de conexao (Linux generico)
+# Versao: 0.1.0
+
+SERVIDOR="35.247.225.22"
+PORTA=22
+
+clear
+echo "╔═══════════════════════════════════════╗"
+echo "║         NEON ERP - Conexao            ║"
+echo "╚═══════════════════════════════════════╝"
+echo ""
+
+if ! command -v ssh &> /dev/null; then
+    echo "Erro: SSH nao esta instalado."
+    echo "Instale com o gerenciador de pacotes da sua distro."
+    exit 1
+fi
+
+read -p "Usuario: " USUARIO
+if [ -z "$USUARIO" ]; then
+    echo "Usuario nao pode ser vazio."
+    exit 1
+fi
+
+echo "Conectando ao servidor NEON..."
+echo ""
+ssh -o ServerAliveInterval=60 -o ServerAliveCountMax=3 -p "$PORTA" "$USUARIO@$SERVIDOR"
