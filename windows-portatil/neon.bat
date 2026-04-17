@@ -19,15 +19,15 @@ if %errorlevel% neq 0 (
     exit /b 1
 )
 
-set "CHAVE=%~dp0neon_key"
-if not exist "%CHAVE%" (
-    echo Erro: Chave de acesso nao encontrada.
-    echo Coloque o arquivo neon_key na mesma pasta deste script.
+set /p USUARIO=Usuario:
+if "%USUARIO%"=="" (
+    echo Usuario obrigatorio.
     pause
     exit /b 1
 )
 
+echo.
 echo Conectando ao servidor NEON...
 echo.
-ssh -o StrictHostKeyChecking=accept-new -o ServerAliveInterval=60 -o ServerAliveCountMax=3 -i "%CHAVE%" -p 22 neon@35.247.225.22
+ssh -o StrictHostKeyChecking=accept-new -o ServerAliveInterval=60 -o ServerAliveCountMax=3 -p 22 %USUARIO%@35.247.225.22
 pause

@@ -9,17 +9,19 @@ OPCAO 1: Duplo-clique (mais facil)
 3. Se o Windows avisar sobre seguranca:
    - Clique em "Mais informacoes"
    - Clique em "Executar assim mesmo"
-4. Faca login com seu usuario e senha
+4. Digite seu usuario e pressione Enter
+5. Digite sua senha e pressione Enter
+6. Pronto! Voce esta no NEON ERP.
 
 OPCAO 2: Comando manual (se o .bat for bloqueado)
 ---------------------------------------------------
-1. Extraia esta pasta no Desktop
-2. Abra o Prompt de Comando (tecla Windows, digite "cmd", Enter)
-3. Copie e cole este comando:
+1. Abra o Prompt de Comando (tecla Windows, digite "cmd", Enter)
+2. Digite:
 
-   ssh -o StrictHostKeyChecking=accept-new -i "%USERPROFILE%\Desktop\neon-portatil-windows\neon_key" -p 22 neon@35.247.225.22
+   ssh SEU_USUARIO@35.247.225.22
 
-4. Faca login com seu usuario e senha
+3. Digite sua senha quando solicitado
+4. Pronto!
 
 REQUISITOS
 ----------
