@@ -27,10 +27,16 @@ cd neon-client/mac
 sudo ./instalar-neon.sh
 ```
 
-### Windows
+### Windows (com admin)
 
 1. Baixe os arquivos da pasta `windows/`
 2. Clique com botao direito em `instalar-neon.bat` > **Executar como administrador**
+
+### Windows (sem admin - portatil)
+
+1. Baixe o ZIP da release: [Download](https://github.com/reneleonreguero/neon-client/releases/latest/download/neon-portatil-windows.zip)
+2. Extraia a pasta em qualquer lugar (Desktop, Documentos, etc.)
+3. De duplo-clique em `neon.bat`
 
 ## Uso
 
