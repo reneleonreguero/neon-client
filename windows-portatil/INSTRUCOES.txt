@@ -1,0 +1,31 @@
+========================================
+    NEON ERP - Instrucoes de Acesso
+========================================
+
+OPCAO 1: Duplo-clique (mais facil)
+-----------------------------------
+1. Extraia esta pasta em qualquer lugar (Desktop, Documentos, etc.)
+2. De duplo-clique em "neon.bat"
+3. Se o Windows avisar sobre seguranca:
+   - Clique em "Mais informacoes"
+   - Clique em "Executar assim mesmo"
+4. Faca login com seu usuario e senha
+
+OPCAO 2: Comando manual (se o .bat for bloqueado)
+---------------------------------------------------
+1. Extraia esta pasta no Desktop
+2. Abra o Prompt de Comando (tecla Windows, digite "cmd", Enter)
+3. Copie e cole este comando:
+
+   ssh -o StrictHostKeyChecking=accept-new -i "%USERPROFILE%\Desktop\neon-portatil-windows\neon_key" -p 22 neon@35.247.225.22
+
+4. Faca login com seu usuario e senha
+
+REQUISITOS
+----------
+- Windows 10 ou 11 (OpenSSH ja vem instalado por padrao)
+- Conexao com a internet
+
+SUPORTE
+-------
+Em caso de duvidas, contate o administrador do sistema.
